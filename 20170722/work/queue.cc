@@ -15,6 +15,15 @@ public:
 		_maxSize = size + 1;
 	}
 
+	~Queue()
+	{
+		if(_qu != NULL)
+		{
+			delete [] _qu;
+			_qu = NULL;
+		}
+	}
+
 	void push(int num);
 	void pop();
 	int  front();
